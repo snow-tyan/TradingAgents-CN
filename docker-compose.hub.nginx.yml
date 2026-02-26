@@ -111,6 +111,10 @@ services:
       BCRYPT_ROUNDS: "12"
       # CORS配置（允许 Nginx 代理）
       CORS_ORIGINS: "*"
+      # PROXY
+      HTTP_PROXY: http://host.docker.internal:7897
+      HTTPS_PROXY: http://host.docker.internal:7897
+      # ALL_PROXY: socks5://host.docker.internal:7897
       # AI模型API密钥（从.env文件读取，environment部分需要显式声明才能覆盖镜像内的占位符）
       DASHSCOPE_API_KEY: "${DASHSCOPE_API_KEY}"
       DASHSCOPE_ENABLED: "${DASHSCOPE_ENABLED:-false}"

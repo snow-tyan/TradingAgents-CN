@@ -4275,6 +4275,14 @@ class ConfigService:
                 # 智谱AI使用 glm-4 模型进行测试
                 test_model = "glm-4"
                 logger.info(f"🔍 智谱AI使用测试模型: {test_model}")
+            elif provider_name == 'nvidia':
+                # 英伟达AI使用 glm-5 模型测试
+                test_model = 'z-ai/glm5'
+                logger.info(f"🔍 NIM使用测试模型: {test_model}")
+            elif provider_name == 'modelscope':
+                # 魔塔社区使用 deepseek-ai/DeepSeek-V3.2 模型测试
+                test_model = 'deepseek-ai/DeepSeek-V3.2'
+                logger.info(f"🔍 魔塔社区使用测试模型: {test_model}")
 
             # 使用一个通用的模型名称进行测试
             # 聚合渠道通常支持多种模型，这里使用 gpt-3.5-turbo 作为测试
